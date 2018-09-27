@@ -10,5 +10,5 @@ export default recipesData => {
     : "";
 };
 
-const recipeListBuilder = (currentRecipeList, recipeData) =>
-  currentRecipeList + renderRecipe(recipeData);
+const recipeListBuilder = (currentRecipeList, recipeData, index) =>
+  currentRecipeList + renderRecipe(recipeData, index % 2);
