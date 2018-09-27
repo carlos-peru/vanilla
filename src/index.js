@@ -1,3 +1,4 @@
+import "./index.css";
 import renderHeader from "./components/header";
 import renderSearchBox from "./components/searchBox";
 
