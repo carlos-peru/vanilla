@@ -1,13 +1,18 @@
 import "../styles/searchBox.css";
 import recipeService from "../services/recipeService";
 import renderRecipeList from "./recipeList";
+import renderError from "./errorMessage";
 
 var recipeSearchResultsTimeoutId;
 
 const displayResults = () => {
   const query = document.querySelector(".searchBox").value;
-  clearTimeout(recipeSearchResultsTimeoutId);
-  recipeSearchResultsTimeoutId = setTimeout(() => searchRecipes(query), 500);
+  if (!query || !query.trim()) {
+    renderError();
+  } else {
+    clearTimeout(recipeSearchResultsTimeoutId);
+    recipeSearchResultsTimeoutId = setTimeout(() => searchRecipes(query), 500);
+  }
 };
 
 const searchRecipes = query => {
