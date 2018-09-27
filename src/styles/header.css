@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  overflow: hidden;
+  background-color: #333;
+}
+
+header div {
+  color: #fcfcfc;
+  font-size: 20px;
+  margin: 0.8em;
+}
+
+header nav a {
+  padding: 1em;
+  color: #fcfcfc;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+}
