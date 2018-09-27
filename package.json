@@ -7,7 +7,9 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "jest",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run"
   },
   "keywords": [],
   "author": "Carlos Castro",
@@ -32,5 +34,8 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "cypress": "^3.1.0"
   }
 }
