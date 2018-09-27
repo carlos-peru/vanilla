@@ -1,3 +1,4 @@
+import "../styles/recipeList.css";
 import renderRecipe from "./recipe";
 
 export default recipesData => {
