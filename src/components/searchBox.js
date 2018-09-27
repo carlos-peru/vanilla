@@ -1,4 +1,5 @@
 import "../styles/searchBox.css";
+import config from "../config";
 import recipeService from "../services/recipeService";
 import stringUtils from "../utils/stringUtils";
 import renderRecipeList from "./recipeList";
@@ -19,7 +20,10 @@ const displayResults = () => {
 
 const searchRecipesWithDebounce = query => {
   clearTimeout(recipeSearchResultsTimeoutId);
-  recipeSearchResultsTimeoutId = setTimeout(() => searchRecipes(query), 500);
+  recipeSearchResultsTimeoutId = setTimeout(
+    () => searchRecipes(query),
+    config.debounceThreshold,
+  );
 };
 
 const searchRecipes = query => {

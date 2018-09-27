@@ -1,5 +1,7 @@
+import config from "../config";
+
 const searchRecipes = (query, page) =>
-  fetch(`http://localhost:3000/recipes/search?query=${query}&page=${page}`)
+  fetch(config.recipeApi.searchEndpoint(query, page))
     .then(response => response.json())
     .then(jsonResponse => jsonResponse);
 
