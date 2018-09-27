@@ -1,5 +1,6 @@
 import "../styles/searchBox.css";
 import recipeService from "../services/recipeService";
+import stringUtils from "../utils/stringUtils";
 import renderRecipeList from "./recipeList";
 import renderError from "./errorMessage";
 
@@ -7,16 +8,34 @@ var recipeSearchResultsTimeoutId;
 
 const displayResults = () => {
   const query = document.querySelector(".searchBox").value;
-  if (!query || !query.trim()) {
-    renderError();
+  if (stringUtils.isBlank(query)) {
+    return;
+  } else if (!stringUtils.isAlphaNumericWithSpaces(query)) {
+    displayError();
   } else {
-    clearTimeout(recipeSearchResultsTimeoutId);
-    recipeSearchResultsTimeoutId = setTimeout(() => searchRecipes(query), 500);
+    searchRecipesWithDebounce(query);
   }
 };
 
+const searchRecipesWithDebounce = query => {
+  clearTimeout(recipeSearchResultsTimeoutId);
+  recipeSearchResultsTimeoutId = setTimeout(() => searchRecipes(query), 500);
+};
+
 const searchRecipes = query => {
-  recipeService.searchRecipes(query).then(results => renderRecipeList(results));
+  recipeService
+    .searchRecipes(query)
+    .then(results => displayRecipeList(results));
+};
+
+const displayError = () => {
+  renderRecipeList(null);
+  renderError(true);
+};
+
+const displayRecipeList = results => {
+  renderError(false);
+  renderRecipeList(results);
 };
 
 export default () => {
