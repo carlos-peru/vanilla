@@ -1,2 +1,4 @@
 import "../styles/recipe.css";
-export default recipeData => `<div class="recipe">${recipeData.title}</div>`;
+
+export default recipeData =>
+  `<a class="recipe" href="${recipeData.href}">${recipeData.title}</a>`;
