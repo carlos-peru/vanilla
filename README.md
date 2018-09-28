@@ -1,11 +1,10 @@
 # Installation
 
 ```
-cd frontend
 npm install
 ```
 
-- Run in development mode: `npm run start`. Note that the backend app needs to be running. Please visit `../backend/REAME.md` for details.
+- Run in development mode: `npm run start`. Note that the backend app needs to be running. Please visit [https://github.com/carlos-peru/gateway](https://github.com/carlos-peru/gateway) for details.
 - Generate a build: `npm run build`
 
 The app will run in [http://localhost:8080](http://localhost:8080)
@@ -14,9 +13,9 @@ The app will run in [http://localhost:8080](http://localhost:8080)
 
 This is a single page application. The app was built in component blocks that put together, represent the UI.
 
-### Setup
+# Setup
 
-The uses eslint and prettier to maintain a good quality of code. The app is powered by webpack to enable modules as well as babel for transpiling es6.
+The app uses eslint and prettier to maintain a good quality of code. The app is powered by webpack to enable modules as well as babel for transpiling es6.
 
 # Implementation
 
