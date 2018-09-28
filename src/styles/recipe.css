@@ -1,10 +1,13 @@
 .recipe {
-  width: 100%;
+  width: 200px;
   padding: 0.8em 0.3em;
   text-decoration: none;
-  color: #6495ed;
+  color: #010307;
+  margin: auto;
 }
 
-.dark {
-  background-color: #e0e0e0;
+.recipe img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,6 +1,7 @@
 import "../styles/recipe.css";
 
-export default (recipeData, dark) =>
-  `<a class="recipe ${dark ? "" : "dark"}" href="${recipeData.href}">${
-    recipeData.title
-  }</a>`;
+export default recipeData =>
+  `<a class="recipe" href="${recipeData.href}">
+    <img src="${recipeData.thumbnail}">
+    <p>${recipeData.title}</p>
+  </a>`;
