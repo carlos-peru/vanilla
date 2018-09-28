@@ -20,10 +20,11 @@ const resolveRecipeSearch = (
     if (!recipeList.length) {
       resolve(recipeSearchResults);
     }
-    arrayUtils.appendArrayElementsWithLimit(
+    arrayUtils.appendArrayElementsWithLimitAndCondition(
       recipeSearchResults,
       recipeList,
       limit,
+      "thumbnail",
     );
     if (recipeSearchResults.length === limit) {
       resolve(recipeSearchResults);
