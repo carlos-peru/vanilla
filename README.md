@@ -19,7 +19,7 @@ The app uses eslint and prettier to maintain a good quality of code. The app is 
 
 # Implementation
 
-The app was implemented in vanilla JS (ES6) without using any framework. It enables modules through webpack to able to implement components. The main idea is to separate business logic from UI. Some components are coupled with some UI specific logic. Most of the business logic was implemented through services and utility modules.
+The app was implemented in vanilla JS (ES6) without using any framework. It enables modules through webpack to implement components. The main idea is to separate business logic from UI. Some components are coupled with some UI specific logic. Most of the business logic was implemented through services and utility modules.
 
 # Tests
 
