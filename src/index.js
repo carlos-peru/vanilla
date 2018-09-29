@@ -1,6 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 import "./index.css";
-import renderHeader from "./components/header";
-import renderSearchBox from "./components/searchBox";
 
-renderHeader();
-renderSearchBox();
+ReactDOM.render(<App />, document.getElementById("app"));
