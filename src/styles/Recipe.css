@@ -1,5 +1,6 @@
 .recipe {
-  width: 200px;
+  min-height: 220px;
+  width: 120px;
   padding: 0.8em 0.3em;
   text-decoration: none;
   color: #010307;
@@ -10,4 +11,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.recipe p {
+  padding: 0 10px;
 }
