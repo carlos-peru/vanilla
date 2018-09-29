@@ -17,6 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
@@ -30,6 +31,8 @@
     "mini-css-extract-plugin": "^0.4.3",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "regenerator-runtime": "^0.12.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
