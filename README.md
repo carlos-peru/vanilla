@@ -1,5 +1,5 @@
 # Demo
-This branch (reactified branch) branch has a [demo](http://amigosalud.rebienestar.com/).
+This branch (reactified branch) has a [demo](http://amigosalud.rebienestar.com/).
 
 # Installation
 
