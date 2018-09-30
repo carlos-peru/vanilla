@@ -19,6 +19,7 @@ const resolveRecipeSearch = (
   recipeApi.searchRecipes(query, page).then(recipeList => {
     if (!recipeList.length) {
       resolve(recipeSearchResults);
+      return;
     }
     arrayUtils.appendArrayElementsWithLimitAndCondition(
       recipeSearchResults,
